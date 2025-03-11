@@ -1,37 +1,68 @@
 # Deploy React Js  Application using Shell-Script
 
-Foobar is a Python library for dealing with word pluralization.
+🚀Streamline your React frontend deployments with this well-structured shell script 🚀📁 📄🛠️
 
-## Installation
+## 👉Installation Set Up
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Ensure you have the following packages installed in ec-2 terminal: 
 
+* Nginx
+* Node.js
+
+ If not there try to install using :
+
+* For Nginx
 ```bash
-pip install foobar
+apt install nginx
+```
+* For Node-js
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+```
+```bash
+apt install nodejs -y
+```
+```bash
+sudo apt install npm -y
 ```
 
-## Usage
 
-```python
-import foobar
 
-# returns 'words'
-foobar.pluralize('word')
 
-# returns 'geese'
-foobar.pluralize('goose')
+## 👉Script file Set Up
+* Create shellscript file. 
 
-# returns 'phenomenon'
-foobar.singularize('phenomena')
+ example: deploy.sh
+```bash
+vi deploy.sh 
 ```
 
-## Contributing
+* Give permissions to that file. 
+```bash
+chmod 755 deploy.sh
+```
+* Copy the Above shell script file and paste in deploy.sh 
+* Replace **REACT_REPO_URL** with your git-hub react code url. 
 
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
+* Replace **APP_NAME** with your app - name. 
 
-Please make sure to update tests as appropriate.
+## 👉Execution of Script file
 
-## License
+* Execute the command to execute the shell script file
+```bash
+./deploy.sh
+```
 
-[MIT](https://choosealicense.com/licenses/mit/)
+* ⚠️ensure that port 80 have access in inbound rules under security group rules of your  instance ⚠️
+
+** optional **
+* Give your Public-IP of Your ec2 instance when it prompts you to ask 
+
+✨🎉🥳 Once deployment is done your **React-application** will be available at  **PORT 80** 🎉🥳🥳
+
+
+
+
+[ 👉Dowload this Sample React Code and Try 👈 ](https://github.com/Syknapse/react-hello-world-app.git)
+
+## 👋 Hi! from Sneha-Madhuri-Jangam 
